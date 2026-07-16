@@ -1,17 +1,36 @@
-This is your group repo for your final project for COGS108.
+# Spotify Wrapped Trend Analysis
 
-This repository is private, and is only visible to the course instructors and your group mates; it is not visible to anyone else.
+## Overview
+A collaborative data science project analyzing the musical features that predict 
+a song's appearance on the 2025 Spotify Wrapped Top Songs list. We investigated 
+whether danceability, energy, and valence, and confounding platforms like TikTok 
+and Billboard Hot 100, could explain what makes a song go (or stay) popular.
 
-Template notebooks for each component are provided. The numbers on the notebook filenames provides the order things are due.  See the syllabus for the due dates in your quarter.
+## Research Question
+Can audio features like danceability, energy, and valence predict which songs make 
+Spotify Wrapped, and can they identify songs likely to make a "comeback"?
 
-You will be graded based solely on the numbered Jupyter notebooks in this repository.  You will recieve your grade and feedback on how to improve via GitHub Issues on this repository. 
+## Datasets
+- 2025 Spotify Wrapped Top Songs
+- TikTok Viral Trends (2020–2022)
+- Billboard Hot 100 (2002–2023)
 
-We have created a suggested organization for your repo, including directory structures for storing `./data`, `./results`, and for creating `./modules` that your notebooks can import. 
+## Key Findings
+- **Danceability** (0.60–0.85) was the strongest predictor of Spotify Wrapped 
+  placement — top 5 songs scored even more narrowly between 0.65–0.85
+- Audio features showed **no significant difference across release decades**, 
+  meaning a 2015 song sounds just as Wrapped-worthy as a 2024 release
+- **TikTok** was confirmed as a confounding variable for danceability and valence, 
+  but not energy
+- **Billboard Hot 100** shared nearly identical average scores across all three 
+  variables, confirming why charting songs tend to sound similar
+- Energy was surprisingly the most **consistent** variable across all datasets, 
+  contradicting our original hypothesis that valence would be most stable
 
-Its worth noting that `./data` is for storing local copies of the data, but by default this repo is configured to **not** allow you to store common datafiles in GitHub.  This is because GitHub has low limits on maximum file and repo size.  So instead you would download your data direct from its original provider or from your personal cloud storage. There are scripts inside some of the notebooks to download data from any URL to `./data`.  If you wish to remove this limitation and store small data files directly in your GitHub you should edit your `.gitignore` file.
+## Tools & Methods
+- Python, pandas, numpy, matplotlib, seaborn
+- Mann-Whitney U Test for statistical validation
+- Cohort analysis by release date (pre-2022, 2022–2023, 2024+)
 
-But this is *your* repo. You are free to manage the repo as you see fit, edit this README, add data files anywhere you want, etc. So long as there are the four numbered Jupyter notebooks in place on the due dates with the required information, the rest is up to you. 
-
-At the final project date there is an option to make your final project visible to others.  If you choose this option your repo will become publicly visible. 
-
-Also, you are encouraged to share this project after the course and to add it to your portfolio. If your repo is public you may fork it. If it is private you may follow [these instructions](https://docs.google.com/document/d/1_PP-vlsyWjNegGGsmeDB5B-ltjYW1Db14q9dx3HM9e4/edit?usp=sharing)
+## Team
+Collaborative project — UC San Diego COGS 108, Spring 2026
